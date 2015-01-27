@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.proofhq.hwas" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>HWASwitch</name>
+    <description>Hardware acceleration switch</description>
+    <js-module name="HWASwitch" src="www/HWASwitch.js">
+        <clobbers target="cordova.plugins.HWASwitch" />
+    </js-module>
+
+	 <platform name="android">
+	        <source-file src="src/HWASwitch.java" target-dir="src/org/apache/cordova/plugin" />
+
+	        <config-file target="res/xml/config.xml" parent="/*">
+	            <feature name="HWASwitch" >
+	                <param name="android-package" value="org.apache.cordova.plugin.HWASwitch"/>
+	            </feature>
+	        </config-file>
+	    </platform>
+</plugin>
